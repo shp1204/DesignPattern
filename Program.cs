@@ -4,6 +4,7 @@ class Program{
     {
         //Strategy.Run();
         //Observer.Run();
-        Decorator.Run();
+        //Decorator.Run();
+        FactoryMethod.Run();
     }   
 }
