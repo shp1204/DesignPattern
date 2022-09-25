@@ -1,6 +1,6 @@
 public abstract class PizzaStore{
-    public Pizza orderPizza(String type){
-        Pizza pizza;
+    public Pizza orderPizza(string type){
+        Pizza pizza = null!;
         pizza = createPizza(type);
 
         pizza.prepare();
@@ -15,22 +15,20 @@ public abstract class PizzaStore{
 }
 
 public class NYPizzaStore : PizzaStore{
-    protected override Pizza createPizza(string item){     
-        if (item == "cheese"){
-            return new NYStyleCheesePizza();
-        } else if (item == "veggie"){
-            return new NYStyleVeggiePizza();
-        } else return new BasicStylePizza();
-    }
-}
+    protected override Pizza createPizza(string item){
+        Pizza pizza = null!;
+        PizzaIngredientFactory ingredientFactory = new NYPizzaIngredientFactory();
 
-public class ChicagoPizzaStore : PizzaStore{
-    protected override Pizza createPizza(string type)
-    {
-        if (type == "cheese"){
-            return new ChicagoStyleCheesePizza();
-        } else if (type == "veggie"){
-            return new ChicagoStyleVeggiePizza();
-        } else return new BasicStylePizza();
-    }
+        if(item == "cheese"){
+            pizza = new CheesePizza(ingredientFactory);
+            pizza.setName("뉴욕 스타일 치즈 피자");
+        }else if(item == "clam"){
+            pizza = new ClamPizza(ingredientFactory);
+            pizza.setName("뉴욕 스타일 조개 피자");
+        }else {
+            pizza = new PepperoniPizza(ingredientFactory);
+            pizza.setName("뉴욕 스타일 페퍼로니 피자");
+        }
+        return pizza;
+    }   
 }
