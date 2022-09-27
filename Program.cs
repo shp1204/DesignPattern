@@ -5,6 +5,7 @@ class Program{
         //Strategy.Run();
         //Observer.Run();
         //Decorator.Run();
-        FactoryMethod.Run();
+        //FactoryMethod.Run();
+        CommandMethod.Run();
     }   
 }
