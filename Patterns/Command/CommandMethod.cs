@@ -1,9 +1,26 @@
 public class CommandMethod{
     public static void Run(){
-        SimpleRemoteControl remote = new SimpleRemoteControl();
-        Light light = new Light();
-        LightOnCommand lightOn = new LightOnCommand(light);
-        remote.setCommand(lightOn);
-        remote.buttonWasPressed();
+        RemoteControl remoteControl = new RemoteControl();
+        Light livingRoomLignt = new Light();
+        Light kitchenLignt = new Light();
+        Stereo stereo = new Stereo();
+
+        LightOnCommand livingRoomLightOn = new LightOnCommand(livingRoomLignt);
+        LightOffCommand livingRoomLightOff = new LightOffCommand(livingRoomLignt);
+        LightOnCommand kitchenLigntOn = new LightOnCommand(kitchenLignt);
+        LightOffCommand kitchenLigntOff = new LightOffCommand(kitchenLignt);
+        StereoOnWithCDCommand stereoOnWithCD = new StereoOnWithCDCommand(stereo);
+        StereoOffWithCDCommand stereoOffWithCD = new StereoOffWithCDCommand(stereo);
+
+        remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
+        remoteControl.setCommand(1, kitchenLigntOn, kitchenLigntOff);
+        remoteControl.setCommand(2, stereoOnWithCD, stereoOffWithCD);
+
+        remoteControl.onButtonWasPushed(0);
+        remoteControl.offButtonWasPushed(0);
+        remoteControl.onButtonWasPushed(1);
+        remoteControl.offButtonWasPushed(1);
+        remoteControl.onButtonWasPushed(2);
+        remoteControl.offButtonWasPushed(2);
     }
 }
