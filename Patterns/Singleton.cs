@@ -1,7 +1,7 @@
 public class ChocolateBoiler{
     private bool empty;
     private bool boiled;
-    private static ChocolateBoiler uniqueInstance;
+    private static ChocolateBoiler? uniqueInstance;
     private ChocolateBoiler(){
         empty = true;
         boiled =false;
