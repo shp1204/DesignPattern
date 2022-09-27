@@ -18,9 +18,13 @@ public class CommandMethod{
 
         remoteControl.onButtonWasPushed(0);
         remoteControl.offButtonWasPushed(0);
+        remoteControl.undoButtonWasPushed();
+        Console.WriteLine("---");
         remoteControl.onButtonWasPushed(1);
         remoteControl.offButtonWasPushed(1);
+        Console.WriteLine("---");
         remoteControl.onButtonWasPushed(2);
         remoteControl.offButtonWasPushed(2);
+        remoteControl.undoButtonWasPushed();
     }
 }

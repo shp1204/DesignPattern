@@ -1,9 +1,11 @@
 public interface Command {
     public void execute();
+    public void undo();
 }
 
 public class NoCommand : Command{
     public void execute(){}
+    public void undo(){}
 }
 
 public class LightOnCommand : Command{
@@ -14,6 +16,9 @@ public class LightOnCommand : Command{
     public void execute(){
         light.on();
     }
+    public void undo(){
+        light.off();
+    }
 }
 
 public class LightOffCommand : Command{
@@ -23,6 +28,9 @@ public class LightOffCommand : Command{
     }
     public void execute(){
         light.off();
+    }
+    public void undo(){
+        light.on();
     }
 }
 
@@ -37,6 +45,9 @@ public class StereoOnWithCDCommand : Command{
         stereo.setCD();
         stereo.setVolume(11);
     }
+    public void undo(){
+        stereo.off();
+    }
 }
 
 public class StereoOffWithCDCommand : Command{
@@ -47,5 +58,8 @@ public class StereoOffWithCDCommand : Command{
 
     public void execute(){
         stereo.off();
+    }
+    public void undo(){
+        stereo.on();
     }
 }
