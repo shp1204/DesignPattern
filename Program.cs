@@ -7,6 +7,7 @@ class Program{
         //Decorator.Run();
         //FactoryMethod.Run();
         //CommandMethod.Run();
-        Adapter.Run();
+        //Adapter.Run();
+        Facade.Run();
     }   
 }
