@@ -6,6 +6,7 @@ class Program{
         //Observer.Run();
         //Decorator.Run();
         //FactoryMethod.Run();
-        CommandMethod.Run();
+        //CommandMethod.Run();
+        Adapter.Run();
     }   
 }
