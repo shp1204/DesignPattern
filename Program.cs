@@ -8,6 +8,7 @@ class Program{
         //FactoryMethod.Run();
         //CommandMethod.Run();
         //Adapter.Run();
-        Facade.Run();
+        //Facade.Run();
+        TemplateMethod.Run();
     }   
 }
