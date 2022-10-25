@@ -3,7 +3,9 @@ public abstract class CaffeineBeverage{
         boilWater();
         brew();
         pourInCup();
-        addCondiments();
+        if(customerWantsCondiments()){
+            addCondiments();
+        }
     }
 
     public void boilWater(){
@@ -15,6 +17,9 @@ public abstract class CaffeineBeverage{
     public void pourInCup(){
         Console.WriteLine("pour in cup");
     }
-
     public abstract void addCondiments();
+
+    bool customerWantsCondiments(){
+        return true;
+    }
 }

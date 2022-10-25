@@ -8,5 +8,10 @@ public class TemplateMethod{
 
         Coffee myCoffee = new Coffee();
         myCoffee.prepareRecipe();
+
+        Console.WriteLine("-------");
+
+        CoffeeWithOption newCoffee = new CoffeeWithOption();
+        newCoffee.prepareRecipe();
     }
 }
