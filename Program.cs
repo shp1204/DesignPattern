@@ -9,6 +9,7 @@ class Program{
         //CommandMethod.Run();
         //Adapter.Run();
         //Facade.Run();
-        TemplateMethod.Run();
+        //TemplateMethod.Run();
+        IteratorStarter.Run();
     }   
 }
