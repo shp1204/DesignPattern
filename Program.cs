@@ -10,6 +10,7 @@ class Program{
         //Adapter.Run();
         //Facade.Run();
         //TemplateMethod.Run();
-        IteratorStarter.Run();
+        //IteratorStarter.Run();
+        Composite.Run();
     }   
 }
