@@ -11,6 +11,7 @@ class Program{
         //Facade.Run();
         //TemplateMethod.Run();
         //IteratorStarter.Run();
-        Composite.Run();
+        //Composite.Run();
+        State.Run();
     }   
 }
